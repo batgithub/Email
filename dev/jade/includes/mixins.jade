@@ -1,0 +1,30 @@
+mixin margin-height(height)
+    td(height=height, style="line-height:#{height}px; font-size:#{height}px;")
+        &nbsp;
+
+mixin lien(href,link)
+    span
+        a.class(href=href) link
+        
+
+
+mixin article(label, titre, image, text, cta)
+    
+    article
+        .label= label
+        h2!= titre
+        
+        - each item in image
+            img(src=item.src, alt=item.alt)
+        
+        p!= text
+        
+        - each val in cta
+            a(href=val.href)= val.link
+    hr
+
+
+mixin texte(texte)
+    article
+        p= texte
+    hr

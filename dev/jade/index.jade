@@ -1,0 +1,29 @@
+extends ./layouts/layout.jade
+
+
+//- block content
+    - each val in articles
+        if val.type == "article-simple"
+            +article(
+                val.label, 
+                val.title, 
+                val.image, 
+                val.texte, 
+                val.cta
+            )
+        
+        else if val.type == "article-small"
+            h2 article small 
+            hr
+            
+        
+        else
+            p ne correspond pas
+            hr 
+        
+
+
+
+
+
+    

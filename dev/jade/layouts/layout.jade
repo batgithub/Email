@@ -1,0 +1,59 @@
+include ../includes/mixins.jade
+doctype strict
+html(xmlns:v="urn:schemas-microsoft-com:vml")
+    head
+        block titlehead
+            title email Payname
+        meta( http-equiv="content-type" content="text/html" charset="utf-8")
+        meta(name="viewport", content="width=device-width; initial-scale=1.0; maximum-scale=1.0;")
+        
+        link(rel="stylesheet", href="./style.css", charset="utf-8")
+
+    body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0")
+        
+        //- Conteneur général 
+        table.body-wrap(width="100%" border="0" cellpadding="0" cellspacing="0")
+            tbody
+                tr
+                    td(valign="top")
+                        
+                        
+                        //- Conteneur de la newsletter 600px
+                        table.wrap-newsletter(align="center" width="100%"  border="0" cellpadding="0" cellspacing="0" style="max-width:600px")
+                            tbody
+                            
+                                //- PREHEADER
+                                include ../includes/preheader.jade
+                                
+                                //- HEADER
+                                include ../includes/header.jade
+                                    
+                                    
+                                                     
+            
+                                //- Début des articles
+                                tr
+                                    td
+                                        block content
+                                            h2 Le contenu par défaut du layout 
+                                                            
+                                
+                                
+                                
+                                //- Footer
+                                tr
+                                    td
+                                        p copyright
+                                        script(src="http://localhost:56417/livereload.js")
+            
+                    
+            
+            
+            
+            
+            
+            
+        
+        
+
+            

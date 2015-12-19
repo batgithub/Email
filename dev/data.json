@@ -1,0 +1,26 @@
+{
+
+    "header": [
+        {
+            "premiereligne":"sd",
+            "nomNewsletter":"C'est l'anusletter",
+            "date":"Décembre 2015"
+
+        }
+    ],
+
+
+    "articles": [
+
+        {
+            "type":"article-simple",
+            "label": "le super label",
+    		"title": "<strong>le super titre</strond>",
+            "image":[{"src": "http://lorempixel.com/g/400/200/","alt": "le alt de folie"}],
+            "texte": "le super text <a href='#'>qdfdsfs</a>",
+            "cta": [{"href": "http://json.org/example.html", "link":"en savoir plus"}]
+
+        }
+
+    ]
+}
