@@ -1,5 +1,5 @@
-mixin margin-height(height)
-    td(height=height, style="line-height:#{height}px; font-size:#{height}px;")
+mixin margin(height, width)
+    td(height=height, width=width, style="line-height:#{height}px; font-size:#{height}px; width:#{width}px;")
         &nbsp;
 
 mixin lien(href,link)
@@ -10,19 +10,31 @@ mixin lien(href,link)
 
 mixin article(label, titre, image, text, cta)
     
-    article
-        .label= label
-        h2!= titre
-        
-        - each item in image
-            img(src=item.src, alt=item.alt)
-        
-        p!= text
-        
-        - each val in cta
-            a(href=val.href)= val.link
-    hr
-
+    tr
+        +margin(10,0)
+        tr
+            td
+                table.article(align="center" width="100%" border="0" cellpadding="0" cellspacing="0")
+                    tbody
+                        
+                        tr
+                            td
+                                - each item in image
+                                    img(src=item.src, alt=item.alt)
+                        tr
+                            td(width="80%" align="center")
+                                .titre!= titre
+                                .description!= text
+                                
+                                - each val in cta
+                                    a(href=val.href)= val.link
+                        
+                        
+                        tr
+                            +margin(30,0)
+        hr
+    tr
+        +margin(10,0)
 
 mixin texte(texte)
     article

@@ -3,7 +3,7 @@
     "header": [
         {
             "premiereligne":"sd",
-            "nomNewsletter":"C'est l'anusletter",
+            "nomNewsletter":"Quoi de neuf ?",
             "date":"Décembre 2015"
 
         }
@@ -15,8 +15,8 @@
         {
             "type":"article-simple",
             "label": "le super label",
-    		"title": "<strong>le super titre</strond>",
-            "image":[{"src": "http://lorempixel.com/g/400/200/","alt": "le alt de folie"}],
+    		"title": "le super titre",
+            "image":[{"src": "http://lorempixel.com/g/600/300/","alt": "le alt de folie"}],
             "texte": "le super text <a href='#'>qdfdsfs</a>",
             "cta": [{"href": "http://json.org/example.html", "link":"en savoir plus"}]
 

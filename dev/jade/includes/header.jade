@@ -3,7 +3,7 @@ tr
         table.header(align="center" width="100%" border="0" cellpadding="0" cellspacing="0")
             tbody
                 tr
-                    +margin-height(20)
+                    +margin(30)
                     
                 - each val in header   
                     tr
@@ -11,12 +11,22 @@ tr
                             =val.nomNewsletter
                     
                     tr
-                        +margin-height(10)
+                        +margin(10)
             
                     tr
-                        td.date(align="center")
-                            =val.date
+                        td
+                            table(align="center"  border="0" cellpadding="0" cellspacing="0")
+                                tbody
+                                    tr
+                                        td.ico    
+                                            img(src="https://gallery.mailchimp.com/8ed9706f04d0d6f6c1e850f81/images/1be26f9a-a6cc-4c27-9dad-3fe9451ef858.png" width="20")
+                                        
+                                        +margin(20,10)
+                                            
+                                    
+                                        td.date(align="center")
+                                            =val.date
                 
                 
                 tr
-                    +margin-height(20)
+                    +margin(30)
