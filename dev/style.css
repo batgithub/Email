@@ -24,6 +24,13 @@ table, td {
   padding: 0;
   width: 100% !important; }
 
+a {
+  color: #178b91; }
+
+img {
+  width: 100%;
+  height: auto; }
+
 .body-wrap {
   background-color: #EAECED;
   font-family: "Open Sans", Trebuchet MS, Verdana, arial, sans-serif;
@@ -31,13 +38,6 @@ table, td {
 
 .wrap-newsletter {
   background-color: inherit; }
-
-a {
-  color: #178b91; }
-
-img {
-  width: 100%;
-  height: auto; }
 
 .logo {
   line-height: 20px;
@@ -75,4 +75,10 @@ img {
     line-height: 30px; }
 
 .footer {
-  color: #666666; }
+  color: #666666;
+  font-family: "Open Sans", Trebuchet MS, Verdana, arial, sans-serif; }
+  .footer .adresse {
+    font-family: "Open Sans", Trebuchet MS, Verdana, arial, sans-serif;
+    color: #cccccc;
+    font-size: 12px;
+    line-height: 20px; }

@@ -6,15 +6,6 @@ $gris-fonce: #171717;
 $vert-clair:#178b91;
 $font: "Open Sans",Trebuchet MS,Verdana, arial, sans-serif;
 
-.body-wrap {
-    background-color: #EAECED;
-    font-family:$font;
-    font-size: 14px;
-}
-
-.wrap-newsletter {
-    background-color: inherit;
-}
 
 a {
     color: $vert-clair;
@@ -25,11 +16,25 @@ img {
     height: auto;
 }
 
+.body-wrap {
+    background-color: #EAECED;
+    font-family:$font;
+    font-size: 14px;
+}
+
+.wrap-newsletter {
+    background-color: inherit;
+}
+
+
 .logo {
     line-height: 20px;
     font-size: 20px;
     color: $vert-clair;
 }
+
+
+
 .header {
     background-color:$vert-clair ;
 
@@ -51,6 +56,10 @@ img {
         font-weight: 100;
     }
 }
+
+
+
+
 .article {
     background-color: white;
     font-family:$font;
@@ -70,4 +79,12 @@ img {
 
 .footer{
     color: $gris;
+    font-family:$font;
+
+    .adresse {
+        font-family:$font;
+        color: #cccccc ;
+        font-size: 12px;
+        line-height: 20px;
+    }
 }
