@@ -2,6 +2,7 @@
 $white: white;
 $gris: #666666;
 $gris-claire:#e3e3e3;
+$gris-fonce: #171717;
 $vert-clair:#178b91;
 $font: "Open Sans",Trebuchet MS,Verdana, arial, sans-serif;
 
@@ -52,10 +53,18 @@ img {
 }
 .article {
     background-color: white;
+    font-family:$font;
 
     .titre {
-        font-size: 30px;
-        
+        font-size: 35px;
+        color: $gris-fonce;
+        font-family:$font;
+    }
+    .description {
+        font-family:$font;
+        color: $gris;
+        font-size: 16px;
+        line-height: 30px;
     }
 }
 

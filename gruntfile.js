@@ -47,7 +47,10 @@ module.exports = function(grunt){
                 options: {
                     applyWidthAttributes: true,
                     applyHeightAttributes: true,
-                    applyAttributesTableElements: true
+                    applyAttributesTableElements: true,
+                    webResources:{
+                        images: false
+                    }
 
                 },
                 files: {
@@ -60,7 +63,7 @@ module.exports = function(grunt){
             options: {livereload: true	},
             sass : {
                 files: ['dev/sass/**/*.scss'],
-                tasks: ['sass:dev','jade'],
+                tasks: ['jade','sass:dev'],
                 options: { spawn: false }
             },
 

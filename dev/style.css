@@ -62,9 +62,17 @@ img {
     font-weight: 100; }
 
 .article {
-  background-color: white; }
+  background-color: white;
+  font-family: "Open Sans", Trebuchet MS, Verdana, arial, sans-serif; }
   .article .titre {
-    font-size: 30px; }
+    font-size: 35px;
+    color: #171717;
+    font-family: "Open Sans", Trebuchet MS, Verdana, arial, sans-serif; }
+  .article .description {
+    font-family: "Open Sans", Trebuchet MS, Verdana, arial, sans-serif;
+    color: #666666;
+    font-size: 16px;
+    line-height: 30px; }
 
 .footer {
   color: #666666; }

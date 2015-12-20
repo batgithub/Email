@@ -2,39 +2,73 @@ mixin margin(height, width)
     td(height=height, width=width, style="line-height:#{height}px; font-size:#{height}px; width:#{width}px;")
         &nbsp;
 
+
 mixin lien(href,link)
     span
         a.class(href=href) link
+        
+
+mixin button(color,bg,link,val)
+    .button
+        | <!--[if mso]>
+        v:roundrect (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:200px;" arcsize="5%" stroke="f" )
+            <w:anchorlock/>
+            center(style="color:#{color};text-transform: uppercase; font-family:sans-serif;font-size:13px;")
+                != val
+        | <!--[endif]-->          
+        a(href=link       style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:200px;-webkit-text-size-adjust:none;")= val
+        
         
 
 
 mixin article(label, titre, image, text, cta)
     
     tr
-        +margin(10,0)
-        tr
-            td
-                table.article(align="center" width="100%" border="0" cellpadding="0" cellspacing="0")
-                    tbody
-                        
-                        tr
-                            td
-                                - each item in image
-                                    img(src=item.src, alt=item.alt)
-                        tr
-                            td(width="80%" align="center")
-                                .titre!= titre
-                                .description!= text
-                                
-                                - each val in cta
-                                    a(href=val.href)= val.link
-                        
-                        
-                        tr
-                            +margin(30,0)
-        hr
+        +margin(20,0)
+        
     tr
-        +margin(10,0)
+        td
+            table.article(align="center" width="100%" border="0" cellpadding="0" cellspacing="0")
+                tbody
+                    
+                    tr
+                        td
+                            - each val in cta
+                                a(href=val.href)
+                                    - each item in image
+                                        img(src=item.src, alt=item.alt)
+                    
+                    tr
+                        +margin(30,0)
+                        
+                    tr
+                    
+                        td(align="center")
+                            table.article(align="center" width="85%" border="0" cellpadding="0" cellspacing="0" style="width:85%;")
+                                tbody
+                                    tr
+                                        td.titre(align="center")
+                                            != titre
+                                    tr
+                                        +margin(25)
+                                    tr
+                                        td.description(align="center")
+                                            != text
+                        
+                    tr
+                        +margin(40,0)
+                            
+                    tr
+                        td(align="center")
+                            - each val in cta
+                                +button('#ffffff','#f4b356',val.href, val.link)
+                    
+                    
+                    tr
+                        +margin(60,0)
+        
+    tr
+        +margin(20,0)
 
 mixin texte(texte)
     article

@@ -16,9 +16,19 @@
             "type":"article-simple",
             "label": "le super label",
     		"title": "le super titre",
-            "image":[{"src": "http://lorempixel.com/g/600/300/","alt": "le alt de folie"}],
+            "image":[{"src": "http://lorempicsum.com/futurama/600/300/2","alt": "le alt de folie"}],
+            "texte": "le super text <a href='#'>qdfdsfs</a> ze jfoziejf ozjfozeijfozjf ozi efozjf ozeijf ozeijfozi efoezij foeijz f zoefijezof jzoeifjez ofjozejfeozijf ozeijf ozeijf ozeijof ijzofeozi jozeijf ",
+            "cta": [{"href": "http://json.org/example.html", "link":"Lire l'article"}]
+
+        },
+
+        {
+            "type":"article-simple",
+            "label": "le super label 2",
+    		"title": "le super titre 2",
+            "image":[{"src": "http://lorempicsum.com/simpsons/600/300/1","alt": "le alt de folie"}],
             "texte": "le super text <a href='#'>qdfdsfs</a>",
-            "cta": [{"href": "http://json.org/example.html", "link":"en savoir plus"}]
+            "cta": [{"href": "https://buttons.cm/", "link":"Lire l'article"}]
 
         }
 
