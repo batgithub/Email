@@ -13,10 +13,10 @@ mixin button(color,bg,link,val)
         | <!--[if mso]>
         v:roundrect (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:200px;" arcsize="5%" stroke="f" )
             <w:anchorlock/>
-            center(style="color:#{color};text-transform: uppercase; font-family:sans-serif;font-size:13px;")
+            center(style="color:#{color};text-transform: uppercase; font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;")
                 != val
         | <!--[endif]-->          
-        a(href=link       style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:200px;-webkit-text-size-adjust:none;")= val
+        a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:200px;-webkit-text-size-adjust:none;")= val
         
         
 
@@ -69,8 +69,3 @@ mixin article(label, titre, image, text, cta)
         
     tr
         +margin(20,0)
-
-mixin texte(texte)
-    article
-        p= texte
-    hr

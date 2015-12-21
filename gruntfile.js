@@ -7,9 +7,9 @@ module.exports = function(grunt){
 	grunt.initConfig({	//initialisation de l'ensemble des tâches
 
 
-        sass: {                              // Task
-            dev: {                            // Target
-                    files: {                         // Dictionary of files
+         sass: {
+            dev: {
+                    files: {
                         'dev/style.css': 'dev/sass/style.scss'
                 },
                     options: {
@@ -17,28 +17,18 @@ module.exports = function(grunt){
                     sourcemap: 'none',
                 }
             }
-        },
+         },
 
-        autoprefixer: {
-            dist :{
-                files: {
-                    // Target-specific file lists and/or options go here.
-                    'dist/style-prefixer.css':'dev/style.css',
-                }
-            }
-        },
-
-
-       jade: {
-          compile: {
-            options: {
-                client: false,
-                pretty: true,
-                data: grunt.file.readJSON("dev/data.json")
-            },
-            files: {
-              'dev/index.html': 'dev/jade/index.jade'
-            }
+         jade: {
+            compile: {
+               options: {
+                   client: false,
+                   pretty: true,
+                   data: grunt.file.readJSON("dev/data.json")
+               },
+               files: {
+                 'dev/index.html': 'dev/jade/index.jade'
+               }
           }
         },
 
@@ -72,7 +62,7 @@ module.exports = function(grunt){
             },
 
             jade: {
-                options: {livereload: true	},
+                options: {livereload: true},
                 files: 'dev/**/*.jade',
                 tasks: ['jade']
             }
@@ -91,14 +81,8 @@ module.exports = function(grunt){
 
         //Inliner
         grunt.registerTask(
-            'in',
+            'export',
             ['jade','sass:dev','inlinecss']
-        );
-
-        //Dist - convertisseur Jade->HTML, sass->CSS et CSS autoprefixer
-        grunt.registerTask(
-            'd',
-            ['jade','sass:dev','autoprefixer:dist']
         );
 
 

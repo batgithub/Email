@@ -13,7 +13,7 @@
 
         {
             "type":"article-simple",
-    		"title": "Le reflexe cagnotte pour préparer les fêtes de fin d'année",
+ 		      "title": "Le reflexe cagnotte pour préparer les fêtes de fin d'année",
             "image":[{"src": "https://gallery.mailchimp.com/8ed9706f04d0d6f6c1e850f81/images/2e47f302-4550-41b3-9e65-31ba8ffea1aa.png","alt": "le alt de folie"}],
             "texte": "Vacances entre ami(e)s, cadeaux de Noël à plusieurs, budget réveillon: pensez à faire une collecte sur payname.fr, la seule cagnotte 100% gratuite et sécurisée, sans frais caché...",
             "cta": [{"href": "https://blog.payname.fr/2015/11/10-raisons-dutiliser-la-cagnotte-payname-pour-les-fetes-de-noel/", "link":"Lire l'article"}]
@@ -22,7 +22,7 @@
 
         {
             "type":"article-simple",
-    		"title": "Payname partenaire de money drop sur tf1",
+ 		      "title": "Payname partenaire de money drop sur tf1",
             "image":[{"src": "https://gallery.mailchimp.com/8ed9706f04d0d6f6c1e850f81/images/7eed751c-99aa-433e-817e-4852da479717.png","alt": "le alt de folie"}],
             "texte": "Rendez-vous dès lundi à 19h pour votre jeu Money Drop Payname affirme ses ambitions et lance sa 1ère campagne TV grand public sur TF1 en communiquant en particulier autour de son service de cagnotte gratuite.",
             "cta": [{"href": "https://blog.payname.fr/2015/11/payname-affirme-ambitions-arrive-tf1/", "link":"Lire l'article"}]
