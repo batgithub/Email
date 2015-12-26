@@ -17,6 +17,16 @@ mixin button(color,bg,link,val)
                 != val
         | <!--[endif]-->          
         a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:200px;-webkit-text-size-adjust:none;")= val
+
+mixin SocialButton(color,bg,link,val)
+    .button
+        | <!--[if mso]>
+        v:roundrect (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" stroke="f" )
+            <w:anchorlock/>
+            center(style="color:#{color};text-transform: uppercase; font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;")
+                != val
+        | <!--[endif]-->          
+        a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:130px;-webkit-text-size-adjust:none;")= val
         
         
 
