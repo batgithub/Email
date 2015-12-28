@@ -16,15 +16,24 @@ mixin button(color,bg,link,val)
         | <!--[endif]-->          
         a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:200px;-webkit-text-size-adjust:none;")= val
 
-mixin SocialButton(color,bg,link,val)
-    .button
-        | <!--[if mso]>
-        v:roundrect (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:160px;" arcsize="5%" stroke="f" )
-            <w:anchorlock/>
-            center(style="color:#{color};text-transform: uppercase; font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;")
-                != val
-        | <!--[endif]-->          
-        a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:160px;-webkit-text-size-adjust:none;")= val
+mixin SocialButton(color,bg,link,val,ico)
+    table(align="left" border="0" cellpadding="0" cellspacing="0").button
+        tbody
+            tr
+                td 
+                    a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:13px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:160px;-webkit-text-size-adjust:none;")
+                        table(align="center" border="0" cellpadding="0" cellspacing="0").button
+                            tbody
+                                tr
+                                    +margin(10)
+                                tr
+                                    td(style:"font-size:13px;line-height:40px;")
+                                        img(src=ico, style="width:20px; height:20px; line-height:40px;")
+                                    +margin(20,10)
+                                    td(style:"font-size:13px;line-height:40px;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:13px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:160px;-webkit-text-size-adjust:none;")
+                                        = val
+                                tr
+                                    +margin(10)
 
 mixin article(titre, image, text, cta)
     
