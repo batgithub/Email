@@ -4,15 +4,24 @@ tr
             tbody
                 tr
                     +margin(20)
+                tr
+                    td(align="center" width="100%‚" style="font-size:22px;")
+                        |Suivez nous !
+                tr
+                    +margin(5)
                 
                 tr
                     td(align="center" width="100%‚")
+                        
+                        //- button facebook
                         table(align="left" border="0" cellpadding="0" cellspacing="0")
                             tbody
                                 tr
                                     +margin(60,20)
                                     td(align="left")
                                         +SocialButton('#ffffff','#3B5998','https://www.facebook.com/payname.fr','Facebook')
+                        
+                        //- button Twitter
                         table(align="left" border="0" cellpadding="0" cellspacing="0")
                             tbody
                                 tr  
@@ -20,6 +29,7 @@ tr
                                     td(align="left")
                                         +SocialButton('#ffffff','#55acee','https://twitter.com/payname','Twitter')
                         
+                        //- button Youtube
                         table(align="left" border="0" cellpadding="0" cellspacing="0")
                             tbody
                                 tr
@@ -34,24 +44,37 @@ tr
                         
                 tr
                     +margin(40)
-                
+            
+                //- Séparateur
                 tr
-                    td(align="center")
-                        |Vous recevez cet email car vous êtes inscrit à la Newsletter sur <a href="https://payname.fr/">Payname.fr</a>
+                    td
+                        table(align="center" width="50%" border="0" cellpadding="0" cellspacing="0") 
+                            tbody
+                                tr  
+                                    td(align="center" width="100%" style="font-size:2px; line-height:2px; background-color:#ABABAB;")
+                                        |nbsp;
                 tr
-                    +margin(20)
+                    +margin(40)
                 
+                //- button Se désabonner
                 tr
                     td(align="center")
                         +button('#ffffff','#b5b5b5','','se désabonner')
                 
                 
                 tr
-                    +margin(20)
+                    +margin(30)
+                
+                tr
+                    td(align="center")
+                        |Vous recevez cet email car vous êtes inscrit à la Newsletter sur <a href="https://payname.fr/">Payname.fr</a>
+                
+                tr
+                    +margin(10)
                 
                 tr
                     td.adresse(align="center")
-                        |Payname 27 rue d'Aubuisson Toulouse 31000 France
+                        |Payname, 27 rue d'Aubuisson Toulouse 31000 France
                 
                 tr
                     +margin(40)

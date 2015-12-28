@@ -2,12 +2,10 @@ mixin margin(height, width)
     td(height=height, width=width, style="line-height:#{height}px; font-size:#{height}px; width:#{width}px;")
         |&nbsp;
 
-
 mixin lien(href,link)
     span
         a.class(href=href) link
         
-
 mixin button(color,bg,link,val)
     .button
         | <!--[if mso]>
@@ -21,17 +19,14 @@ mixin button(color,bg,link,val)
 mixin SocialButton(color,bg,link,val)
     .button
         | <!--[if mso]>
-        v:roundrect (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" stroke="f" )
+        v:roundrect (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:160px;" arcsize="5%" stroke="f" )
             <w:anchorlock/>
             center(style="color:#{color};text-transform: uppercase; font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;")
                 != val
         | <!--[endif]-->          
-        a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:130px;-webkit-text-size-adjust:none;")= val
-        
-        
+        a(href=link style="background-color:#{bg};border-radius:2px;color:#{color};display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;line-height:40px;text-align:center;text-transform: uppercase;text-transform: uppercase; text-decoration:none;width:160px;-webkit-text-size-adjust:none;")= val
 
-
-mixin article(label, titre, image, text, cta)
+mixin article(titre, image, text, cta)
     
     tr
         +margin(20,0)
@@ -40,19 +35,16 @@ mixin article(label, titre, image, text, cta)
         td
             table.article(align="center" width="95%" border="0" cellpadding="0" cellspacing="0")
                 tbody
-                    
                     tr
                         td
                             - each val in cta
                                 a(href=val.href)
                                     - each item in image
                                         img(src=item.src, alt=item.alt)
-                    
                     tr
                         +margin(30,0)
                         
                     tr
-                    
                         td(align="center")
                             table.article(align="center" width="85%" border="0" cellpadding="0" cellspacing="0" style="width:85%;")
                                 tbody
@@ -65,6 +57,56 @@ mixin article(label, titre, image, text, cta)
                                         td.description(align="center")
                                             != text
                         
+                    tr
+                        +margin(40,0)
+                            
+                    tr
+                        td(align="center")
+                            - each val in cta
+                                +button('#ffffff','#f4b356',val.href, val.link)
+                    
+                    
+                    tr
+                        +margin(60,0)
+        
+    tr
+        +margin(20,0)
+
+mixin article-presse(titre, image,liens, cta)
+    
+    tr
+        +margin(20,0)
+        
+    tr
+        td
+            table.article(align="center" width="95%" border="0" cellpadding="0" cellspacing="0")
+                tbody
+                    tr
+                        td
+                            - each val in cta
+                                a(href=val.href)
+                                    - each item in image
+                                        img(src=item.src, alt=item.alt)
+                    tr
+                        +margin(30,0)
+                        
+                    tr
+                        td(align="center")
+                            table.article(align="center" width="85%" border="0" cellpadding="0" cellspacing="0" style="width:85%;")
+                                tbody
+                                    tr
+                                        td.titre(align="center")
+                                            != titre
+                                    tr
+                                        +margin(25)
+                                    
+                                    - each lien in liens
+                                        - each valien in lien
+                                            tr
+                                                td(align="center")
+                                                    a(href=valien[0].url, style="font-size:16px;")
+                                                        !=  valien[0].titre
+                                            +margin(20)
                     tr
                         +margin(40,0)
                             

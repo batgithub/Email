@@ -5,16 +5,19 @@ block content
     - each val in articles
         if val.type == "article-simple"
             +article(
-                val.label, 
                 val.title, 
                 val.image, 
                 val.texte, 
                 val.cta
             )
         
-        else if val.type == "article-small"
-            h2 article small 
-            hr
+        else if val.type == "article-presse"
+            +article-presse(
+                val.title, 
+                val.image, 
+                val.liens,
+                val.cta
+            )
             
         
         else
