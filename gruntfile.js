@@ -18,6 +18,11 @@ module.exports = function(grunt){
                 }
             }
          },
+         jsonlint: {
+            sample: {
+                src: [ 'dev/data.json' ]
+            }
+        },
 
          jade: {
             compile: {
@@ -50,15 +55,22 @@ module.exports = function(grunt){
         },
 
     	watch: {
-            options: {livereload: true	},
             sass : {
                 files: ['dev/sass/**/*.scss'],
                 tasks: ['jade','sass:dev'],
-                options: { spawn: false }
+                options: { spawn: false, livereload: true }
             },
 
             grunt: {
-                files: ['Gruntfile.js']
+                files: ['Gruntfile.js'],
+                options: { livereload: true }
+            },
+
+            json: {
+                files: ['dev/data.json'],
+                tasks: ['jsonlint','jade'],
+                options: {livereload: true}
+
             },
 
             jade: {
